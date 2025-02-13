@@ -9,3 +9,7 @@ def timelineView(request):
     for post in posts:
         print(f">>> {post} <<<")
     return HttpResponse("ta feito")
+
+def index(request):
+    posts = Timeline.objects.all()
+    return render(request,'template.html', {"dados": posts})
