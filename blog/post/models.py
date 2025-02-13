@@ -9,3 +9,5 @@ class Timeline(models.Model):
     texto=models.CharField(max_length=300)
     
     
+    def __str__(self):
+        return f"Titulo do post: {self.nome}"
